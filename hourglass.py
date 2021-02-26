@@ -3,7 +3,7 @@ arr = []
 for _ in range(6):
     arr.append(list(map(int, input().rstrip().split())))
 
-max_val = 0
+sum_list = []
 
 for i in range(0, 4):
     for j in range(0, 4):
@@ -11,7 +11,6 @@ for i in range(0, 4):
             (arr[i + 1][j + 1]) +\
             (arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2])
 
-        if hg_sum > max_val:
-            max_val = hg_sum
+        sum_list.append(hg_sum)
 
-print(max_val)
+print(max(sum_list))
